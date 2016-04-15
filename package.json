@@ -1,0 +1,22 @@
+{
+  "name": "gulp-sass-simple",
+  "version": "1.0.0",
+  "description": "Gulp with SASS. Includes autoprefixer, minification, sourcemaps",
+  "homepage": "https://github.com/jooeycheng/gulp-sass-simple",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jooeycheng/gulp-sass-simple.git"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-if": "2.0.0",
+    "gulp-util": "3.0.7",
+    "gulp-sass": "2.2.0",
+    "gulp-cssnano": "2.1.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-sourcemaps": "1.6.0",
+    "browser-sync": "2.11.1",
+    "yargs": "4.6.0"
+  },
+  "license": "MIT"
+}
