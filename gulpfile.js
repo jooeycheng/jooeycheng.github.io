@@ -32,7 +32,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('serve', ['sass', 'browser-sync'], function() {
   gulp.watch("./assets/sass/**/*.sass", ['sass']);
-  gulp.watch(["./*.html", "./assets/js/*.js"]).on('change', browserSync.reload);
+  gulp.watch(["./*.html", "./assets/js/*.js", "./assets/*.json"]).on('change', browserSync.reload);
 });
 
 

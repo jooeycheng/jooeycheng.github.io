@@ -8,15 +8,146 @@
 
   <!-- CSS -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
-  <h1 class="hello">Hello, it's mes.</h1>
+  <header class="nav-top hidden-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="header-logo">
+            <a href="/">Joey Cheng</a>
+          </div>
+        </div>
+        <div class="col-xs-8">
+          <nav class="top-nav">
+            <ul>
+              <li><a href="#section-work">My Work</a></li>
+              <li><a href="#section-about">About Me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <section class="intro">
+    <div id="particles"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="">Hello.</h1>
+          <h2 class="">I'm Joey Cheng - <br class="visible-xs"><em>a Web Developer</em></h2>
+          <h3 class="">I code in PHP and Ruby on Rails.</h3>
+        </div>
+        <div class="col-xs-12">
+          <!-- <button class="say-hello">Say hello back</button> -->
+          <div class="see-my-work">
+            See some of <button class="button">my work</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="section-work">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title">My Work</h1>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <article class="project">
+            <div class="image">
+              <a target="_blank" href="https://chrome.google.com/webstore/detail/mmu-camsys-dashboard/lepjdepdjclpgiknnfakgohejcljhphh?hl=en-GB">
+                <img src="http://placehold.it/400x400">
+              </a>
+            </div>
+            <div class="content">
+              <h2><a target="_blank" href="https://chrome.google.com/webstore/detail/mmu-camsys-dashboard/lepjdepdjclpgiknnfakgohejcljhphh?hl=en-GB">MMU CaMSys Dashboard</a></h2>
+              <p>A Google Chrome extension that replaces the login page and adds dashboard feature into CaMSys.
+                It scrapes information from pages within the system upon login, and places them onto the dashboard.</p>
+              <p class="built-with">Built with JavaScript</p>
+          </article>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <article class="project">
+            <div class="image">
+              <a target="_blank" href="https://mmu-minecraft.herokuapp.com/">
+                <img src="http://placehold.it/400x400">
+              </a>
+            </div>
+            <div class="content">
+              <h2><a target="_blank" href="https://mmu-minecraft.herokuapp.com/">MMU Minecraft</a></h2>
+              <p>Registration and student verification website for MMU Minecraft server. A python script in the game
+              server periodically pings the website’s API to check for new player registrations and add them into the
+              game server’s whitelist.</p>
+              <p class="built-with">Built with Ruby on Rails</p>
+          </article>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <article class="project">
+            <div class="image">
+              <a target="_blank" href="https://monstercrasher.herokuapp.com/">
+                <img src="http://placehold.it/400x400">
+              </a>
+            </div>
+            <div class="content">
+              <h2><a target="_blank" href="https://monstercrasher.herokuapp.com/">Monster Crasher (Server/API)</a></h2>
+              <p>The API and web interface to an asynchronous multiplayer mobile game - Monster Crasher, developed by a friend.
+                The web interface features a live-update map to allow players to view and follow their friend's game.</p>
+              <p class="built-with">Built with Ruby on Rails &amp; JavaScript</p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="section-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title">About Me</h1>
+          <p>I'm a self-taught web developer and currently a computer science student at MMU.
+          I'm also graduating soon and looking for a job.</p>
+          <p style="color: red">(needs revision)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="footer-list">
+            <li>
+              <a class="email" id="email"></a>
+            </li>
+            <li>
+              <a href="https://github.com/jooeycheng">GitHub</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/jooeycheng/">Codepen</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12">
+          <p class="copyright">&copy; 2016 Joey Cheng</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/main.js"></script>
   <!-- <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

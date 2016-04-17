@@ -1,34 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic)
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,900italic,400italic,300italic,300,100italic,100)
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px)
+
+$font-lato: 'Lato', sans-serif
+$font-slabo: 'Slabo 27px', serif
+
+$color-primary-dark: #112D4E
+$color-primary: #337AB7
+$color-secondary: #3F72AF
+$color-accent: #DBE2EF
+$color-background: #F9F7F7
+$color-black: lighten(#000, 10%)
 
 *
   margin: 0
   padding: 0
-  // font-size: 100%
-  // font: inherit
+  font-family: $font-lato
 
 ::before, ::after
   content: ''
 
-ol, ul
-  list-style: none
+a, a:hover, a:active, a:focus
+  text-decoration: none
+  color: inherit
 
-blockquote, q
-  quotes: none
 
-blockquote:before, blockquote:after,
-q:before, q:after
-  content: ''
-  content: none
+.button
+  background-color: transparent
+  padding: 8px 22px
+  border: 2px solid $color-primary
+  border-radius: 4px
+  color: $color-primary
+  &:hover
+    background-color: #FFF
 
-table
-  border-collapse: collapse
-  border-spacing: 0
+#particles
+  position: absolute
+  width: 100%
+  height: 100vh
 
-// html, body
-//   height: 100%
-//   width: 100%
 
-.hello
-  color: red
-  font-family: 'Lato'
-  font-weight: 900
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Top Nav
+
+.nav-top
+  background-color: rgba(255, 255, 255, .75)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+  padding: 40px 0
+  position: absolute
+  z-index: 100
+  width: 100%
+  .header-logo
+    font-size: 20px
+    font-weight: 700
+    color: $color-primary
+  nav.top-nav
+    ul
+      margin: 0
+      float: right
+      list-style: none
+      li
+        float: left
+        font-size: 18px
+        margin-left: 36px
+        line-height: 1
+        &:first-child
+          margin-left: 0
+        a
+          color: $color-primary
+          &:hover
+            color: $color-primary-dark
+
+// @media only screen and (max-width: 768px)
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Section - Intro
+
+section.intro
+  background-color: $color-background
+  height: 100vh
+  overflow: hidden
+  position: relative
+  color: $color-primary-dark
+  h1
+    padding-top: 200px
+    // font-size: 60px
+    font-size: 4.4em
+    font-weight: 900
+    letter-spacing: 2px
+    margin-bottom: 20px
+  h2
+    // font-size: 40px
+    font-size: 2.8em
+    font-weight: 700
+    margin-bottom: 16px
+  h3
+    // font-size: 30px
+    font-size: 2.2em
+    font-weight: 400
+    font-family: $font-slabo
+  .see-my-work
+    font-family: $font-slabo
+    font-size: 22px
+    color: $color-primary-dark
+    margin-top: 40px
+    button
+      margin-left: 12px
+
+@media only screen and (max-width: 768px)
+  section.intro
+    font-size: 0.9em
+    h1
+      padding-top: 80px
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Section - Work
+
+section.work
+  background-color: $color-accent
+  min-height: 100vh
+  position: relative
+  color: $color-primary-dark
+
+h1.title
+  color: $color-primary-dark
+  font-size: 32px
+  font-weight: 800
+  padding: 40px 0 20px
+
+article.project
+  background-color: $color-background
+  padding: 5px 5px 30px
+  margin-bottom: 20px
+  border-radius: 5px
+  .image
+    img
+      border-radius: 3px 3px 0 0
+      max-width: 100%
+      display: block
+  .content
+    padding: 0 6px
+    h2
+      padding-top: 10px
+      font-size: 22px
+      font-weight: 600
+      color: $color-primary
+    p
+      padding-top: 8px
+      font-weight: 400
+      font-size: 14px
+      // letter-spacing: 1px
+      line-height: 20px
+      color: $color-primary-dark
+    p.built-with
+      padding-top: 8px
+      font-weight: 600
+      font-style: italic
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Section - About
+
+section.about
+  // background-color: $color-background
+  padding-bottom: 50px
+  p
+    font-size: 20px
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Footer
+
+footer
+  background-color: $color-primary-dark
+  color: $color-background
+  padding: 40px 0 50px
+  font-family: $font-slabo
+  font-size: 16px
+  font-weight: 300
+  ul.footer-list
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      float: left
+      margin-left: 30px
+      font-weight: 400
+      &:first-child
+        margin-left: 0
+      a:hover
+        text-decoration: underline
+      a.email:after
+        content: 'Email'
+  .copyright
+    padding-top: 40px
