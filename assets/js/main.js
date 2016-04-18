@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  smoothScroll.init();
   $("#email").attr("href", "mailto:hello@jooeycheng.me");
 });
 
