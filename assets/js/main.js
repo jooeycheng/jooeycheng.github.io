@@ -15,15 +15,16 @@ $( document ).ready(function() {
       $(".hello-container").removeClass("adele");
       helloAudio.pause();
       helloAudio.currentTime = 0;
+      ga('send', 'event', 'Eggs', 'Played', 'Adele Hello');
     }
   }, ".hello-text");
 
-  $(document).on('mousemove', function(e) {
-    $('#spinner').css({
-      left: e.pageX + 15,
-      top:  e.pageY
-    });
-  });
+  // $(document).on('mousemove', function(e) {
+  //   $('#spinner').css({
+  //     left: e.pageX + 15,
+  //     top:  e.pageY
+  //   });
+  // });
 
 });
 
