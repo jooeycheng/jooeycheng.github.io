@@ -45,7 +45,12 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="">Hello.</h1>
+          <div class="hello-container">
+            <h1 class=""><!--
+              --><span class="hello-text">Hello.</span><!--
+              --><div class="adele-container"><img class="adele" src="/images/adele.png"></div>
+            </h1>
+          </div>
           <h2 class="">I'm Joey Cheng - <br class="visible-xs"><em>a Web Developer</em></h2>
           <!-- <h3 class="">I speak JavaScript, PHP and Ruby (on Rails).</h3> -->
           <h3 class="">I code in JavaScript, PHP and Ruby (on Rails).</h3>
@@ -148,6 +153,12 @@
       </div>
     </div>
   </footer>
+
+  <div class="spinner" id="spinner">
+    <div class="spinner-inner"></div>
+    <div class="spinner-mask"></div>
+    <div class="spinner-mask-two"></div>
+  </div>
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/smooth-scroll.min.js"></script>

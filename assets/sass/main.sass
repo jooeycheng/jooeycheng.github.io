@@ -87,7 +87,7 @@ section.intro
   position: relative
   color: $color-primary-dark
   h1
-    padding-top: 160px
+    margin-top: 160px
     // font-size: 60px
     font-size: 4.4em
     font-weight: 900
@@ -198,3 +198,148 @@ footer
         content: 'Email'
   .copyright
     padding-top: 40px
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Adele
+
+.hello-container
+  position: relative
+  .hello-text
+    cursor: progress
+  .adele-container
+    display: inline-block
+    position: absolute
+    z-index: 100
+    bottom: 0
+    overflow: hidden
+    .adele
+      transform: translateY(270px)
+      // box-shadow: inset 0 -15px 14px -10px $color-background // subtle bottom inset shadow (cant use cos image is above shadow)
+
+  &.adele
+    .hello-text
+      font-size: 140%
+      text-shadow: 0px 0px 20px $color-primary
+      transition: font-size 1s, text-shadow .5s
+      transition-timing-function: linear
+      transition-delay: 6s
+    .adele
+      transform: translateY(80px)
+      transition: transform .3s ease-in
+      transition-delay: 8.7s
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// Spinner
+// not being used cos dunno how to run one loop and stop
+
+$spinner-diameter: 20px
+$spinner-front-color: $color-primary
+$spinner-back-color: #EEE
+$spinner-loop-time: 6s
+
+.spinner
+  -webkit-mask-box-image: -webkit-radial-gradient(center, ellipse cover, $spinner-front-color 66%, rgba(0, 0, 0, 0) 68%)
+  background: $spinner-back-color
+  width: $spinner-diameter
+  height: $spinner-diameter
+  position: absolute
+  visibility: hidden
+  &.show
+    visibility: visible
+
+.spinner-inner
+  position: absolute
+  top: 0
+  left: 0
+  background: transparent
+  border-width: $spinner-diameter / 2
+  width: 0
+  height: 0
+  border-style: solid
+  border-top-color: $spinner-front-color
+  border-right-color: transparent
+  border-left-color: transparent
+  border-bottom-color: transparent
+  -webkit-transform: rotate(-45deg)
+  -webkit-animation: inner $spinner-loop-time linear infinite
+
+.spinner-mask
+  position: absolute
+  top: 1px
+  left: 0px
+  background: transparent
+  border-width: $spinner-diameter / 2
+  width: 0
+  height: 0
+  border-style: solid
+  border-top-color: $spinner-back-color
+  border-right-color: transparent
+  border-left-color: transparent
+  border-bottom-color: transparent
+  -webkit-transform: rotate(-45deg)
+  -webkit-animation: mask $spinner-loop-time linear infinite
+
+.spinner-mask-two
+  display: block
+  position: absolute
+  top: 1px
+  left: -1px
+  background: transparent
+  border-width: $spinner-diameter / 2
+  width: 0
+  height: 0
+  border-style: solid
+  border-top-color: $spinner-front-color
+  border-right-color: transparent
+  border-left-color: transparent
+  border-bottom-color: transparent
+  -webkit-transform: rotate(45deg)
+  -webkit-animation: mask-two $spinner-loop-time linear infinite
+
+@-webkit-keyframes inner
+  0%
+    -webkit-transform: rotate(-45deg)
+
+  25%
+    border-left-color: transparent
+
+  26%
+    border-left-color: $spinner-front-color
+
+  50%
+    border-bottom-color: transparent
+
+  51%
+    border-bottom-color: $spinner-front-color
+
+  75%
+    border-right-color: transparent
+
+  76%
+    border-right-color: $spinner-front-color
+
+  100%
+    -webkit-transform: rotate(315deg)
+    border-left-color: $spinner-front-color
+    border-bottom-color: $spinner-front-color
+    border-right-color: $spinner-front-color
+
+@-webkit-keyframes mask
+  0%
+    -webkit-transform: rotate(-45deg)
+
+  75%
+    -webkit-transform: rotate(-45deg)
+
+  100%
+    -webkit-transform: rotate(45deg)
+
+@-webkit-keyframes mask-two
+  0%
+    opacity: 0
+
+  75%
+    opacity: 0
+
+  76%
+    opacity: 1
