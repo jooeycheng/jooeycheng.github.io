@@ -7,8 +7,11 @@ $( document ).ready(function() {
   $(document).on({
     mouseenter: function() {
       // $("#spinner").addClass("show");
-      $(".hello-container").addClass("adele");
-      helloAudio.play();
+      setTimeout(
+        function() {
+          $(".hello-container").addClass("adele");
+          helloAudio.play();
+        }, 2000);
     },
     mouseleave: function() {
       // $("#spinner").removeClass("show");
