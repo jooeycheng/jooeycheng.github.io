@@ -11,6 +11,7 @@ $( document ).ready(function() {
         function() {
           $(".hello-container").addClass("adele");
           helloAudio.play();
+          console.log("Yay! You found it! My effort is not wasted.");
         }, 2000);
     },
     mouseleave: function() {
@@ -32,7 +33,7 @@ $( document ).ready(function() {
 });
 
 $( window ).load(function() {
-
+  console.log("There's an easter egg on this page. Can you find it? ;)");
 });
 
 particlesJS.load('particles', 'assets/particles.json', function() {
