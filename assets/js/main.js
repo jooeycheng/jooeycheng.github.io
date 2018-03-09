@@ -12,7 +12,7 @@ $( document ).ready(function() {
           $(".hello-container").addClass("adele");
           helloAudio.play();
           console.log("Yay! You found it! My effort is not wasted.");
-        }, 1000);
+        }, 500);
     },
     mouseleave: function() {
       // $("#spinner").removeClass("show");
